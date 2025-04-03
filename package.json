@@ -20,6 +20,7 @@
     "@elizaos/client-twitter": "0.1.9",
     "@elizaos/core": "0.1.9",
     "@elizaos/plugin-bootstrap": "0.1.9",
+    "@elizaos/plugin-hedera": "github:hedera-dev/plugin-hedera",
     "@elizaos/plugin-image-generation": "0.1.9",
     "@elizaos/plugin-node": "0.1.9",
     "@elizaos/plugin-solana": "0.1.9",
@@ -41,12 +42,39 @@
   "pnpm": {
     "overrides": {
       "onnxruntime-node": "1.20.0"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@elizaos/plugin-hedera",
+      "better-sqlite3"
+    ],
+    "ignoredBuiltDependencies": [
+      "@discordjs/opus",
+      "@elizaos/plugin-node",
+      "bigint-buffer",
+      "bufferutil",
+      "canvas",
+      "es5-ext",
+      "esbuild",
+      "ffmpeg-static",
+      "keccak",
+      "node-hid",
+      "node-llama-cpp",
+      "onnxruntime-node",
+      "protobufjs",
+      "puppeteer",
+      "secp256k1",
+      "sharp",
+      "sodium-native",
+      "usb",
+      "utf-8-validate",
+      "wtf_wikipedia",
+      "youtube-dl-exec"
+    ]
   },
   "devDependencies": {
+    "pm2": "5.4.3",
     "ts-node": "10.9.2",
     "tsup": "8.3.5",
-    "typescript": "5.6.3",
-    "pm2": "5.4.3" 
+    "typescript": "5.6.3"
   }
 }
